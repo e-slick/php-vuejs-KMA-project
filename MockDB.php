@@ -19,7 +19,11 @@ class MockDB
 
     public function displayUsersArray(){
         foreach($this->usersArray as $user){
-            echo $user->getUsername();
+            if($user->getUsername()!=null) {
+                echo $user->getUsername();
+            }
+            else
+                continue;
         }
     }
 

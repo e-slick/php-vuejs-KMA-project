@@ -17,38 +17,33 @@
                 message: 'Vue/PHP Project for KMA'
             }
         });
-
-        //creating two vue.js components
-        const Home = { template: '<div> Home page </div>' };
-        const About = { template: '<div> About page </div>' };
-
-        /*------------
-        ROUTE SECTION
-        ------------*/
-
-        //defining the "routes" the browser will take -- i think
-        const routes = [
-            { path: '', component: Home },
-            { path: '/about', component: About },
-            { path: '*', component: Home }
-        ];
-
-        //creating a new router instance and passing the route array into it
-        const router = new VueRouter({
-            mode: 'history',
-            routes: routes
-        });
-
-        //creating a vue instance and populating it with the router instance
-        const app = new Vue({
-            router: router
-        }).$mount('#app');
-
     </script>
+
+    <?php include 'Blogger.php';
+        //Database initialization to be passed throughout the website using POST method and json.encode
+        $myFakeDB = new MockDB();
+        $tempUser = new Blogger("slicke", "1234");
+        $tempUser1 = new Blogger("user1", "4321");
+        $myFakeDB->addUsersArray($tempUser);
+        $myFakeDB->addUsersArray($tempUser1);
+        $post = json_encode($myFakeDB->displayUsersArray());
+        echo $post;
+
+        file_put_contents("data.json",$post);
+    ?>
+
+
+    <form action="login.php" method="post">
+        <input type="submit" name="<?php echo $post ?>" value="My Blogs" />
+    </form>
+
+
+
+
+
 
     <a href="first.php">Functionality</a>
     <br>
-    <a href="login.php">My Blogs</a>
     <br>
     <a href="signup.php">Sign up</a>
 

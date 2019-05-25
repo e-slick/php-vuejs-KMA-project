@@ -18,23 +18,22 @@
 
 
 
-
 /*
  // CODE SHOWCASING WORKING FUNCTIONALITY FOR USER/DATABASE CLASS
-   // ****************************************************
+ // ***********************************************************
     $mockDatabase = new MockDB();
 
 
-    $newBlogger = new Blogger("derrick", "sloans");
+    $newBlogger = new Blogger("Blogman", "password1234");
     $mockDatabase->addUsersArray($newBlogger);
     echo $newBlogger->getUsername(), "you have: ";
     echo $newBlogger->getAmtPosts();
     echo " posts.", "<br><br>";
 
 
-    //CODE SHOWCASING WORKING FUNCTIONALITY FOR BLOGGER CLASS
-   // *******************************************************
-    $userBlog = new Blogger("otherderrick", "othersloans");
+ //CODE SHOWCASING WORKING FUNCTIONALITY FOR BLOGGER CLASS
+ //*******************************************************
+    $userBlog = new Blogger("Blogwoman", "1234password");
     $mockDatabase->addUsersArray($userBlog);
     $userBlog->addEntry("a", "this is an entry");
     $userBlog->addEntry("b", "an entry this is");
@@ -43,7 +42,7 @@
     echo "<br><br><strong><i>After Removing An Entry</i></strong><br><br>";
     $userBlog->displayEntries();
     $mockDatabase->displayUsersArray();
-    */
+*/
     ?>
 
 </body>

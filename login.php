@@ -11,13 +11,27 @@
 
 <?php include 'Blogger.php';
 
-
-//NOTE THAT THE LOGIN PAGE WOULD NOT SUCCESSFULLY LOGIN EVER BECAUSE IF A USER INPUTS A NAME THAT'S IN THE DATABASE
-//THE USER IS AUTOMATICALLY REDIRECTED. THIS BEGS FOR A SIGN UP AND A LOGIN PAGE SEPARATELY.
+echo $_POST[''];
 
 
 
 
 
+
+/*
+    $tempUser = new Blogger("eslick", "1234");
+    $mockDB = new MockDB();
+    $mockDB->addUsersArray($tempUser);
+    $redirectURL = "login.php";
+    $redirectURL2 = "blogPage.php";
+    if($mockDB->searchUsersArray($_POST["username"])){
+        header("Location:".$redirectURL);
+        die();
+    }
+    else{
+        header("Location:".$redirectURL2);
+        die();
+    }
+*/
 
 ?>

@@ -3,12 +3,16 @@
 
 <form action="" method="post">
     Title: <input type="text" name="title" /><br /><br />
-    Text: <input type="text" name="blog" /><br /><br />
+    Text: <textarea type="text" name="blog" rows="5" cols="40" /></textarea><br /><br />
     <input type="submit" name="submit" value="Post to my Blog" />
 </form>
 
 <?php include 'Blogger.php';
-$tempUser = new Blogger("eslick", "1269");
+
+//This code is temporary, still working on sending JSON object using a form
+//Once the server is accessed I create a MockDB object in order to store users, however, this isn't exactly
+//necessary because you guys use your own database hosting, I think MySQL?
+$tempUser = new Blogger("eslick", "1234");
 $mockDB = new MockDB();
 $mockDB->addUsersArray($tempUser);
 $redirectURL = "login.php";
