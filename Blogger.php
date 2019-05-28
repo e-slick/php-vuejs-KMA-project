@@ -32,7 +32,7 @@ class Blogger extends User
         }
     }
 
-    public function displayPrevEntry($entryKey){
+    public function displaySingleEntry($entryKey){
         foreach($this->previousEntries as $key => $value){
             if($entryKey == $key) {
                 echo "<strong>Entry found!</strong><br>";

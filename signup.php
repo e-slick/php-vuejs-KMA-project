@@ -15,10 +15,12 @@
     $mockDB = new MockDB();
     $mockDB->addUsersArray($tempUser);
     $redirectURL = "signup.php";
+    /*
     if($mockDB->searchUsersArray($_POST["username"])) {
         header("Location:".$redirectURL);
         echo "User already exists";
         die();
     }
+    */
 
 ?>

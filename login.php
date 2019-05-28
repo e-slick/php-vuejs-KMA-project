@@ -11,7 +11,7 @@
 
 <?php include 'Blogger.php';
 
-echo $_POST[''];
+//echo $_POST[''];
 
 
 

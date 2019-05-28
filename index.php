@@ -26,10 +26,8 @@
         $tempUser1 = new Blogger("user1", "4321");
         $myFakeDB->addUsersArray($tempUser);
         $myFakeDB->addUsersArray($tempUser1);
-        $post = json_encode($myFakeDB->displayUsersArray());
-        echo $post;
-
-        file_put_contents("data.json",$post);
+        //$post = json_encode($myFakeDB->displayUsersArray());
+        //file_put_contents("data.json",$post);
     ?>
 
 
@@ -43,7 +41,6 @@
 
 
     <a href="first.php">Functionality</a>
-    <br>
     <br>
     <a href="signup.php">Sign up</a>
 

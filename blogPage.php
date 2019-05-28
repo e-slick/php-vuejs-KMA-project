@@ -10,8 +10,8 @@
 <?php include 'Blogger.php';
 
 //This code is temporary, still working on sending JSON object using a form
-//Once the server is accessed I create a MockDB object in order to store users, however, this isn't exactly
-//necessary because you guys use your own database hosting, I think MySQL?
+//Once the server is accessed I create a "MockDB" object in order to store users and manipulate the class for 'show'
+
 $tempUser = new Blogger("eslick", "1234");
 $mockDB = new MockDB();
 $mockDB->addUsersArray($tempUser);

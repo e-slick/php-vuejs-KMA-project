@@ -18,7 +18,7 @@
 
 
 
-/*
+
  // CODE SHOWCASING WORKING FUNCTIONALITY FOR USER/DATABASE CLASS
  // ***********************************************************
     $mockDatabase = new MockDB();
@@ -41,8 +41,9 @@
     $userBlog->removeEntry("a");
     echo "<br><br><strong><i>After Removing An Entry</i></strong><br><br>";
     $userBlog->displayEntries();
+    echo "<br><br>", "<strong><i>Displaying users from DB</i></strong>", "<br><br>";
     $mockDatabase->displayUsersArray();
-*/
+
     ?>
 
 </body>
