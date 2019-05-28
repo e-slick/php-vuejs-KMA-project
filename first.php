@@ -1,6 +1,6 @@
 <html>
 <body>
-<strong>Welcome,</strong> this page outlines many of the features I learned during this project
+<strong>Welcome,</strong> this page demonstrates some of the features I learned during this project, and my familiarity with PHPs data structures
 <br><br>
 <a href="index.php">Home</a>
 <br>
@@ -26,7 +26,7 @@
 
     $newBlogger = new Blogger("Blogman", "password1234");
     $mockDatabase->addUsersArray($newBlogger);
-    echo $newBlogger->getUsername(), "you have: ";
+    echo $newBlogger->getUsername(), ", you have: ";
     echo $newBlogger->getAmtPosts();
     echo " posts.", "<br><br>";
 
@@ -35,8 +35,8 @@
  //*******************************************************
     $userBlog = new Blogger("Blogwoman", "1234password");
     $mockDatabase->addUsersArray($userBlog);
-    $userBlog->addEntry("a", "this is an entry");
-    $userBlog->addEntry("b", "an entry this is");
+    $userBlog->addEntry("a", "entry");
+    $userBlog->addEntry("b", "entry 2");
     $userBlog->displayEntries();
     $userBlog->removeEntry("a");
     echo "<br><br><strong><i>After Removing An Entry</i></strong><br><br>";
